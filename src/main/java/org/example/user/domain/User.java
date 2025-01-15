@@ -48,10 +48,6 @@ public class User {
         followerCount.decrease();
     }
 
-    public Long getId() {
-        return id;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,5 +59,17 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public int getFollowingCount() {
+        return followingCount.getCount();
+    }
+
+    public int getFollowerCount() {
+        return followerCount.getCount();
     }
 }
